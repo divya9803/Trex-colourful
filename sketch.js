@@ -85,7 +85,7 @@ function draw() {
   
     if((touches.length > 0 || keyDown("space")) && trex.y >= height-190)
     {
-      trex.velocityY = -15;
+      trex.velocityY = -12;
     }
   
     trex.velocityY = trex.velocityY + 0.8

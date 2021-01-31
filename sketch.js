@@ -40,7 +40,7 @@ function setup() {
   
   trex.addAnimation("running", trex_running);
   trex.addAnimation("collided", trex_collided);
-  trex.scale = height/1100;
+  trex.scale = height/4100;
   
   ground = createSprite(200,height - 90,400,20);
   ground.addImage("ground",groundImage);
@@ -85,7 +85,7 @@ function draw() {
   
     if((touches.length > 0 || keyDown("space")) && trex.y >= height-190)
     {
-      trex.velocityY = -12;
+      trex.velocityY = -22;
     }
   
     trex.velocityY = trex.velocityY + 0.8

@@ -74,8 +74,10 @@ function draw() {
   
   trex.collide(invisibleGround);
   
+  stroke("black")
+  fill("black")
   textSize(20);
-  text("Score: "+ score, width - 100,height - 500);
+  text("Score: "+ score, width - 100,height - 1000);
   
   if (gameState===PLAY){
     score = score + Math.round(getFrameRate()/60);
@@ -132,7 +134,7 @@ function spawnClouds() {
   //write code here to spawn the clouds
   if (frameCount % 60 === 0) {
     var cloud = createSprite(600,120,40,10);
-    cloud.y = Math.round(random(height - 500,height-300));
+    cloud.y = Math.round(random(height - 1000,height-600));
     cloud.addImage(cloudImage);
     cloud.scale = 1;
     cloud.velocityX = -3;

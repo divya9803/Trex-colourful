@@ -77,7 +77,7 @@ function draw() {
   stroke("black")
   fill("black")
   textSize(20);
-  text("Score: "+ score, width - 100,height - 1000);
+  text("Score: "+ score, width - 100,height - 2500);
   
   if (gameState===PLAY){
     score = score + Math.round(getFrameRate()/60);
@@ -85,7 +85,7 @@ function draw() {
   
     if((touches.length > 0 || keyDown("space")) && trex.y >= height-190)
     {
-      trex.velocityY = -22;
+      trex.velocityY = -15;
     }
   
     trex.velocityY = trex.velocityY + 0.8
@@ -134,7 +134,7 @@ function spawnClouds() {
   //write code here to spawn the clouds
   if (frameCount % 60 === 0) {
     var cloud = createSprite(600,120,40,10);
-    cloud.y = Math.round(random(height - 1000,height-600));
+    cloud.y = Math.round(random(height - 3000,height-2500));
     cloud.addImage(cloudImage);
     cloud.scale = 1;
     cloud.velocityX = -3;
